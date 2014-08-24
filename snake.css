@@ -24,6 +24,10 @@ td {
 	color: green;
 }
 
+.lightGreen {
+	background-color: #33CC33;
+}
+
 .content{
 	font-size: 48px;
 	font-weight: bold;

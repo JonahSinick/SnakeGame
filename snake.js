@@ -11,7 +11,8 @@
 		this.dir = [-1, 0];
 		var middle = Math.floor(boardSize /2); 
 		this.segments = [[middle, middle]];
-		this.head = this.segments[0]
+		this.head = this.segments[0];
+		this.tail = this.segments[0];
 		this.turned = false;
 		this.collided = false;
 	};
@@ -39,6 +40,7 @@
 			this.board.apples[head] = null;
 		}
 		this.head = this.segments[this.segments.length - 1];
+		this.tail = this.segments[0];
 		var nonHead = this.segments.slice(0, segments.length - 1)
 		if(contains(nonHead, this.head)){
 			this.collided = true;
@@ -110,7 +112,11 @@
 					elem_j.addClass("red");
 				}
 				if(contains(this.snake.segments, [i, j])){
-					elem_j.addClass("green");
+					if(this.snake.tail == [i, j].toString() || this.snake.head == [i, j].toString()){
+						elem_j.addClass("lightGreen")
+					} else{
+						elem_j.addClass("green");
+					}
 					elem_j.removeClass("red");
 				}
 				if(this.snake.collided && !elem_j.hasClass("green") && !elem_j.hasClass("red")){
@@ -126,7 +132,6 @@
 	    for (key in obj) {
 	        if (obj.hasOwnProperty(key) && obj[key]) size++;
 	    }
-			console.log(size);
 	    return size;
 	};	
 	
