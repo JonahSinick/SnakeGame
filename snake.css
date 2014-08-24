@@ -1,0 +1,47 @@
+td {
+	width: 30px;
+	height: 30px;
+	background-color: pink;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}
+
+.black {
+	background-color: black;
+}
+
+.title {
+	height: 200px;
+}
+
+.victory {
+	color: green;
+}
+
+.content{
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+.score {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 50px;
+	font-size: 24px;
+}
+.root {
+	width: 800px;
+	margin: 0 auto;
+}
+
+table {
+	margin: 0 auto;
+}

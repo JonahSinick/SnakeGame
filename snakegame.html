@@ -1,0 +1,31 @@
+<html>
+  <head>
+		<link rel="stylesheet" type="text/css" href="snake.css"><link>
+    <script src="keymaster.js"></script>    
+    <script src="jquery.js"></script>
+		
+    <script type="application/javascript" src="snake.js"></script>
+    <script type="application/javascript" src="snake_ui.js"></script>
+  </head>
+  <body>
+		<div class="title">
+			<div style="height: 40px"></div>
+			<div class="content">Snake Game</div>
+			<div class="score">
+				<div class="message"></div>
+				<div class="currentScore">Current Score: 1</div>
+				<div class="highScore">High Score: 1</div>
+			</div>
+		</div>
+		<div class="root"></div>
+		<script>
+			var game = new SnakeGame.View();
+			var root = $(".root")
+			var bound = game.start.bind(game);
+			game.$el = root;
+			game.start();
+		</script>
+  </body>
+	
+	
+</html>
